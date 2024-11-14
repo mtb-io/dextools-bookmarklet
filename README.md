@@ -1,37 +1,53 @@
 # DEXTools Multi-Chain Pair Explorer Bookmarklet
 
-This bookmarklet allows you to quickly look up any token pair on DEXTools by simply clicking a bookmark and entering the contract address. It automatically detects the blockchain based on the address format.
+A simple, secure bookmarklet that lets you quickly look up any token pair on DEXTools. Just click the bookmark, enter a contract address, and it automatically detects the correct blockchain.
+
+## Features
+- 🔍 Quick token pair lookup
+- 🔗 Direct access to DEXTools explorer
+- 🔒 No external dependencies
+- ⛓️ Automatic chain detection
+- 💻 Works on all major browsers
 
 ## Supported Chains
-- Ethereum
-- Solana
+- Ethereum (0x addresses)
+- Solana (All other address formats)
 
 ## Installation
 
-1. Right-click your browser's bookmarks bar and select "Add page" or "Add bookmark"
-   - If you don't see the bookmarks bar, press `Ctrl + Shift + B` (Windows/Linux) or `⌘ + Shift + B` (Mac) to show it
+1. Show your browser's bookmarks bar:
+   - **Windows/Linux**: Press `Ctrl + Shift + B`
+   - **Mac**: Press `⌘ + Shift + B`
 
-2. In the "Name" field, enter a name for your bookmarklet (e.g., "DEXTools Explorer")
+2. Right-click the bookmarks bar and select "Add page" or "Add bookmark"
 
-3. In the "URL" field, copy and paste the following code:
+3. Configure the bookmark:
+   - **Name**: "DEXTools Explorer" (or your preferred name)
+   - **URL**: Copy and paste the code below:
 ```javascript
 javascript:void(function(){const a=prompt("Enter the contract address:");if(!a||!a.trim())return;const b=a.trim();let c;b.startsWith("0x")&&42===b.length?c="ether":c="solana";window.open(`https://www.dextools.io/app/en/${c}/pair-explorer/${b}`,"_blank")})();
 ```
 
-4. Click "Save"
-
 ## Usage
 
-1. Click the bookmarklet in your bookmarks bar
-2. Enter the contract address when prompted
-3. The DEXTools pair explorer page will open in a new tab automatically detecting the correct blockchain
+1. Click the bookmarklet
+2. Enter any token contract address
+3. Get redirected to DEXTools with the correct chain automatically selected
 
-## Chain Detection Logic
-- Addresses starting with 0x: Ethereum
-- All other addresses: Solana
+## Security
+- ✅ Code is open source and can be inspected
+- ✅ Only connects to official DEXTools website
+- ✅ No data collection or storage
+- ✅ No external API calls
 
-## Note
+## Support
 
-Make sure you have your bookmarks bar visible in your browser to use this bookmarklet. 
+Found a bug or need help? [Open an issue](https://github.com/mtb-io/dextools-bookmarklet/issues)
 
-Built by [mtb](https://x.com/LiverpoolMTB) on X.
+## License
+
+MIT License - feel free to modify and reuse
+
+## Author
+
+Built by [mtb](https://x.com/LiverpoolMTB) on X
