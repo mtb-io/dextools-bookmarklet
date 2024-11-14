@@ -11,6 +11,7 @@ A simple, secure bookmarklet that lets you quickly look up any token pair on DEX
 
 ## Supported Chains
 - Ethereum (0x addresses)
+- Apechain (0x addresses)
 - Solana (All other address formats)
 
 ## Installation
@@ -25,14 +26,15 @@ A simple, secure bookmarklet that lets you quickly look up any token pair on DEX
    - **Name**: "DEXTools Explorer" (or your preferred name)
    - **URL**: Copy and paste the code below:
 ```javascript
-javascript:void(function(){const a=prompt("Enter the contract address:");if(!a||!a.trim())return;const b=a.trim();let c;b.startsWith("0x")&&42===b.length?c="ether":c="solana";window.open(`https://www.dextools.io/app/en/${c}/pair-explorer/${b}`,"_blank")})();
+javascript:void(function(){const a=prompt("Enter the contract address:");if(!a||!a.trim())return;const b=a.trim();let c;if(b.startsWith("0x")&&42===b.length){const a=prompt("Type 1 for Apechain or 2 for Ethereum:");c="1"===a?"apechain":"2"===a?"ether":void 0;if(!c)return}else c="solana";window.open(`https://www.dextools.io/app/en/${c}/pair-explorer/${b}`,"_blank")})();
 ```
 
 ## Usage
 
 1. Click the bookmarklet
 2. Enter any token contract address
-3. Get redirected to DEXTools with the correct chain automatically selected
+3. For 0x addresses, you'll be prompted to choose between Apechain (1) or Ethereum (2)
+4. Get redirected to DEXTools with the correct chain automatically selected
 
 ## Security
 - ✅ Code is open source and can be inspected
