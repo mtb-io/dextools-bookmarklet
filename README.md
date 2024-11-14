@@ -1,5 +1,7 @@
 # DEXTools Multi-Chain Pair Explorer Bookmarklet
 
+![DEXTools Bookmarklet Preview](assets/head-image.png)
+
 A simple, secure bookmarklet that lets you quickly look up any token pair on DEXTools. Just click the bookmark, enter a contract address, and it automatically detects the correct blockchain.
 
 ## Features
