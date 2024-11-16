@@ -14,6 +14,7 @@ A simple, secure bookmarklet that lets you quickly look up any token pair on DEX
 ## Supported Chains
 - Ethereum (0x addresses)
 - Apechain (0x addresses)
+- Polygon (0x addresses)
 - TON (EQ/UQ addresses)
 - Solana (All other address formats)
 
@@ -36,7 +37,10 @@ javascript:void(function(){const a=prompt("Enter the contract address:");if(!a||
 
 1. Click the bookmarklet
 2. Enter any token contract address
-3. For 0x addresses, you'll be prompted to choose between Apechain (1) or Ethereum (2)
+3. For 0x addresses, you'll be prompted to choose between:
+   - Apechain (1)
+   - Ethereum (2)
+   - Polygon (3)
 4. TON addresses (starting with either "EQ" or "UQ") are automatically detected
 5. Get redirected to DEXTools with the correct chain automatically selected
 
@@ -56,4 +60,4 @@ MIT License - feel free to modify and reuse
 
 ## Author
 
-Built by [mtb](https://x.com/LiverpoolMTB) on X
+Built by [mtb labs](https://mtblabs.io)
