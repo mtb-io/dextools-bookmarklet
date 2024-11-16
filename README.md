@@ -30,7 +30,7 @@ A simple, secure bookmarklet that lets you quickly look up any token pair on DEX
    - **Name**: "DEXTools Explorer" (or your preferred name)
    - **URL**: Copy and paste the code below:
 ```javascript
-javascript:void(function(){const a=prompt("Enter the contract address:");if(!a||!a.trim())return;const b=a.trim();let c;if(b.startsWith("0x")&&42===b.length){const a=prompt("Type 1 for Apechain or 2 for Ethereum:");c="1"===a?"apechain":"2"===a?"ether":void 0;if(!c)return}else if(b.startsWith("EQ")||b.startsWith("UQ")){c="ton"}else c="solana";window.open(`https://www.dextools.io/app/en/${c}/pair-explorer/${b}`,"_blank")})();
+javascript:void(function(){const t=prompt("Enter the contract address:");if(!t||!t.trim())return;const r=t.trim();let n;if(r.startsWith("0x")&&42===r.length){const t=prompt("Type 1 for Apechain, 2 for Ethereum, or 3 for Polygon:");if(n="1"===t?"apechain":"2"===t?"ether":"3"===t?"polygon":void 0,!n)return}else n=r.startsWith("EQ")||r.startsWith("UQ")?"ton":"solana";window.open(`https://www.dextools.io/app/en/${n}/pair-explorer/${r}`,"_blank")})();
 ```
 
 ## Usage
