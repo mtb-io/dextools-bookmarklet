@@ -1,10 +1,27 @@
 # DEXTools QuickSearch 🔍
 
+[![Version](https://img.shields.io/badge/version-0.0.1-blue.svg)](https://github.com/mtb-io/dextools-bookmarklet/releases)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+
 ![DEXTools QuickSearch](assets/head-image.jpg)
 
-🏷️ v0.0.1
-
 A simple, secure bookmarklet that lets you quickly look up any token pair on DEXTools. Just click the bookmark, enter a contract address, and it automatically detects the correct blockchain.
+
+## Table of Contents 📑
+- [Quick Start](#quick-start-)
+- [Features](#features-)
+- [Supported Chains](#supported-chains-%EF%B8%8F)
+- [Installation](#installation-)
+  - [Chromium-based (Chrome/Brave/Firefox)](#chromium-based-chromebravefirefox)
+  - [Safari](#safari)
+  - [Installation Steps](#installation-steps)
+- [Usage](#usage-)
+- [Security](#security-)
+- [Support](#support-)
+- [Author](#author-)
+- [License](#license-%EF%B8%8F)
+
+🏷️ v0.0.1
 
 ## Quick Start ⚡
 1. Add the bookmarklet to your browser (instructions below)
@@ -32,11 +49,13 @@ First, show your browser's bookmarks bar:
 - **Windows/Linux**: Press `Ctrl + Shift + B`
 - **Mac**: Press `⌘ + Shift + B`
 
+💡 The unminified source code is available in the `src/` directory for inspection.
+
 Choose the correct snippet for your browser:
 
 ### Chromium-based (Chrome/Brave/Firefox) 
 <details>
-<summary>Click to show code (dex-chromium.js)</summary>
+<summary>Click to show code (dist/dex-chromium.min.js)</summary>
 
 ```javascript
 javascript:void(function(){const t=prompt("Enter the contract address:");if(!t||!t.trim())return;const r=t.trim();let n;if(r.startsWith("0x")&&42===r.length){const t=prompt("Type 1 for Apechain, 2 for Ethereum, or 3 for Polygon:");if(n="1"===t?"apechain":"2"===t?"ether":"3"===t?"polygon":void 0,!n)return}else n=r.startsWith("EQ")||r.startsWith("UQ")?"ton":"solana";window.open(`https://www.dextools.io/app/en/${n}/pair-explorer/${r}`,"_blank")})();
@@ -45,7 +64,7 @@ javascript:void(function(){const t=prompt("Enter the contract address:");if(!t||
 
 ### Safari
 <details>
-<summary>Click to show code (dex-safari.js)</summary>
+<summary>Click to show code (dist/dex-safari.min.js)</summary>
 
 ```javascript
 javascript:(function(){const a=prompt("Enter the contract address:");if(!a||!a.trim())return;const b=a.trim();let c;if(b.startsWith("0x")&&42===b.length){const a=prompt("Type 1 for Apechain, 2 for Ethereum, or 3 for Polygon:");if(c="1"===a?"apechain":"2"===a?"ether":"3"===a?"polygon":null,!c)return}else c=b.startsWith("EQ")||b.startsWith("UQ")?"ton":"solana";location.href=`https://www.dextools.io/app/en/${c}/pair-explorer/${b}`})();
@@ -85,24 +104,7 @@ Built by [mtb labs](https://mtblabs.io)
 
 ## License ⚖️
 
-MIT License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Copyright (c) 2024 mtb labs
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+## Changelog 📝
+See [CHANGELOG.md](CHANGELOG.md) for a list of changes and versions.
