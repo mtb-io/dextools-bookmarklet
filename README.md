@@ -1,24 +1,31 @@
-# DEXTools QuickSearch
+# DEXTools QuickSearch 🔍
 
 ![DEXTools QuickSearch](assets/head-image.jpg)
 
+🏷️ v0.0.1
+
 A simple, secure bookmarklet that lets you quickly look up any token pair on DEXTools. Just click the bookmark, enter a contract address, and it automatically detects the correct blockchain.
 
-## Features
+## Quick Start ⚡
+1. Add the bookmarklet to your browser (instructions below)
+2. Click it and enter a contract address like: `0x1234...` or `EQxyz...`
+3. Get redirected to DEXTools with the correct chain automatically detected (e.g., `https://www.dextools.io/app/en/ton/pair-explorer/EQxyz...`)
+
+## Features ✨
 - 🔍 Quick token pair lookup
 - 🔗 Direct access to DEXTools explorer
 - 🔒 No external dependencies
 - ⛓️ Automatic chain detection
 - 💻 Works on all major browsers
 
-## Supported Chains
+## Supported Chains ⛓️
 - Ethereum (0x addresses)
 - Apechain (0x addresses)
 - Polygon (0x addresses)
 - TON (EQ/UQ addresses)
 - Solana (All other address formats)
 
-## Installation
+## Installation 📥
 
 1. Show your browser's bookmarks bar:
    - **Windows/Linux**: Press `Ctrl + Shift + B`
@@ -33,7 +40,7 @@ A simple, secure bookmarklet that lets you quickly look up any token pair on DEX
 javascript:void(function(){const t=prompt("Enter the contract address:");if(!t||!t.trim())return;const r=t.trim();let n;if(r.startsWith("0x")&&42===r.length){const t=prompt("Type 1 for Apechain, 2 for Ethereum, or 3 for Polygon:");if(n="1"===t?"apechain":"2"===t?"ether":"3"===t?"polygon":void 0,!n)return}else n=r.startsWith("EQ")||r.startsWith("UQ")?"ton":"solana";window.open(`https://www.dextools.io/app/en/${n}/pair-explorer/${r}`,"_blank")})();
 ```
 
-## Usage
+## Usage 🔧
 
 1. Click the bookmarklet
 2. Enter any token contract address
@@ -45,21 +52,21 @@ javascript:void(function(){const t=prompt("Enter the contract address:");if(!t||
 5. Solana addresses (any other format) are automatically detected
 6. Get redirected to DEXTools with the correct chain automatically selected
 
-## Security
+## Security 🔒
 - ✅ Code is open source and can be inspected
 - ✅ Only connects to official DEXTools website
 - ✅ No data collection or storage
 - ✅ No external API calls
 
-## Support
+## Support 💬
 
 Found a bug or need help? [Open an issue](https://github.com/mtb-io/dextools-bookmarklet/issues)
 
-## Author
+## Author 👨‍💻
 
 Built by [mtb labs](https://mtblabs.io)
 
-## License
+## License ⚖️
 
 MIT License
 
