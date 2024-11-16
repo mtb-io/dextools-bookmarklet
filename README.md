@@ -1,6 +1,6 @@
-# DEXTools Multi-Chain Pair Explorer Bookmarklet
+# DEXTools QuickSearch
 
-![DEXTools Bookmarklet Preview](assets/head-image.jpg)
+![DEXTools QuickSearch](assets/head-image.jpg)
 
 A simple, secure bookmarklet that lets you quickly look up any token pair on DEXTools. Just click the bookmark, enter a contract address, and it automatically detects the correct blockchain.
 
@@ -42,7 +42,8 @@ javascript:void(function(){const t=prompt("Enter the contract address:");if(!t||
    - Ethereum (2)
    - Polygon (3)
 4. TON addresses (starting with either "EQ" or "UQ") are automatically detected
-5. Get redirected to DEXTools with the correct chain automatically selected
+5. Solana addresses (any other format) are automatically detected
+6. Get redirected to DEXTools with the correct chain automatically selected
 
 ## Security
 - ✅ Code is open source and can be inspected
