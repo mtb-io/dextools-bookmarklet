@@ -55,9 +55,11 @@ javascript:void(function(){const t=prompt("Enter the contract address:");if(!t||
 
 Found a bug or need help? [Open an issue](https://github.com/mtb-io/dextools-bookmarklet/issues)
 
-## License
+## Author
 
-MIT License - feel free to modify and reuse
+Built by [mtb labs](https://mtblabs.io)
+
+## License
 
 MIT License
 
@@ -80,7 +82,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-## Author
-
-Built by [mtb labs](https://mtblabs.io)
